@@ -1,0 +1,512 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="keywords" content="" />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- Custom Theme files -->
+    <link href="{% static 'css/bootstrap.min.css' %}" type="text/css" rel="stylesheet" media="all">
+    <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="all">
+    <!-- font-awesome icons -->
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+    <!-- //Custom Theme files -->
+    <!-- online-fonts -->
+    <link href="{% static 'http://fonts.googleapis.com/css?family=Amaranth:400,400i,700,700i' %}" rel="stylesheet">
+    <link href="{% static 'http://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i' %}" rel="stylesheet">
+    <script src="{% static 'js/jquery-2.2.3.min.js' %}"></script>
+    <script src="{% static 'js/factor.js' %}"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- header -->
+            <div class="col-lg-2" id="spy">
+                <div class="header-agile">
+                    <h1>
+                        <a class="navbar-brand" href="index.html">
+                           FIND
+                        </a>
+                    </h1>
+                </div>
+                <ul class="nav nav-pills flex-column mt-lg-5">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#glance">glance</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">about</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">service</a></li>
+                </ul>
+            </div>
+            <!-- //header -->
+            <!-- main -->
+            <div class="col-lg-10 scrollspy-example pr-0" data-spy="scroll" data-target="#spy">
+                <!-- banner -->
+                <div id="home" class="w3ls-banner d-flex  align-items-top justify-content-center">
+
+                    <div class="bnr-w3pvt text-center" style="position: absolute">
+                        <h2 class="bnr-txt-w3">find & analyze</h2>
+                        <p>We must accept finite disappointment, but we must never lose infinite hope.</p>
+                    </div>
+                    <div class="video"  style="width:700px;height: 350px;position: absolute;bottom: 10px;">
+                        <video src="{% static 'video/页面指南.mp4' %}" style="width:700px;height: 350px;"></video>
+                    </div>
+                </div>
+                <!-- glance -->
+                <div id="glance">
+                    <div class="services_agile py-lg-5 py-4">
+                        <div class="container py-md-5">
+                            <div class="row py-lg-5">
+                                <div class="col-lg-5 w3pvt-head">
+                                    <span class="w3-line"></span>
+                                    <h3 class="agile-title d-inline">glance</h3>
+                                </div>
+                                <div class="col-lg-7 mt-lg-0 mt-3">
+                                    <p>您可以在下方的圆圈框中输入您想输入的权重系数，后台会根据你所输入的数据来计算您的要求以及选择
+                                        最终会提供给您您想要的数据
+                                    </p>
+                                </div>
+                            </div>
+                            <form action="#"  id="form-data" class="bs-example bs-example-form" role="form" method="post">
+                                <div class="row services-top">
+                                    <div class="col-lg-3 col-md-6 col-sm-4 service_grid text-center">
+                                        <div class="serviceinfo_agile ih-item circle colored effect17">
+                                            <div class="img"><img src="{% static 'images/buy.jpg' %}" class="img-fluid" alt="img"></div>
+                                            <div class="info d-flex align-items-center justify-content-center">
+                                                <input type="checkbox" class="c-box" style="transform: scale(3,3);position: absolute;top: 60px" name="buy_house">
+                                                <input type="text" class="data" placeholder="请输入权重系数" style="position: absolute;bottom: 60px" name="buy_house_value">
+                                            </div>
+                                        </div>
+                                        <p>买房</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-4 service_grid text-center">
+                                        <div class="serviceinfo_agile ih-item circle colored effect17">
+                                            <div class="img"><img src="{% static 'images/weather.jpg' %}" class="img-fluid" alt="img"></div>
+                                            <div class="info  d-flex align-items-center justify-content-center">
+                                                <input type="checkbox" class="c-box" style="transform: scale(3,3);position: absolute;top: 60px" name="temperature">&nbsp;
+                                                <input type="text" class="data" placeholder="请输入权重系数" style="position: absolute;bottom: 60px" name="temperature_value">
+                                            </div>
+                                        </div>
+                                        <p>天气</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-4 service_grid text-center">
+                                        <div class="serviceinfo_agile ih-item circle colored effect17">
+                                            <div class="img"><img src="{% static 'images/rent1.jpg' %}" class="img-fluid" alt="img"></div>
+                                            <div class="info  d-flex align-items-center justify-content-center">
+                                                <input type="checkbox" class="c-box" style="transform: scale(3,3);position: absolute;top: 60px" name="renting">&nbsp;
+                                                <input type="text" class="data" placeholder="请输入权重系数" style="position: absolute;bottom: 60px" name="renting_value">
+                                            </div>
+                                        </div>
+                                        <p>租房</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-4 service_grid text-center">
+                                        <div class="serviceinfo_agile ih-item circle colored effect17">
+                                            <div class="img"><img src="{% static 'images/air.jpg' %}" class="img-fluid" alt="img"></div>
+                                            <div class="info  d-flex align-items-center justify-content-center">
+                                                <input type="checkbox" class="c-box" style="transform: scale(3,3);position: absolute;top: 60px" name="aqi">&nbsp;&nbsp;
+                                                <input type="text" class="data" placeholder="请输入权重系数" style="position: absolute;bottom: 60px" name="aqi_value">
+                                            </div>
+                                        </div>
+                                        <p>空气指数AQI</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-4 service_grid text-center">
+                                        <div class="serviceinfo_agile ih-item circle colored effect17">
+                                            <div class="img"><img src="{% static 'images/work.jpg' %}" class="img-fluid" alt="img"></div>
+                                            <div class="info  d-flex align-items-center justify-content-center">
+                                                <input type="checkbox" class="c-box" style="transform: scale(3,3);position: absolute;top: 60px" name="job_number">&nbsp;
+                                                <input type="text" class="data" placeholder="请输入权重系数" style="position: absolute;bottom: 60px" name="job_number_value">
+                                            </div>
+                                        </div>
+                                        <p>工作数量</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-4 service_grid text-center">
+                                        <div class="serviceinfo_agile ih-item circle colored effect17">
+                                            <div class="img"><img src="{% static 'images/salary.jpg' %}" class="img-fluid" alt="img"></div>
+                                            <div class="info  d-flex align-items-center justify-content-center">
+                                                <input type="checkbox" class="c-box" style="transform: scale(3,3);position: absolute;top: 60px" name="salary">&nbsp;
+                                                <input type="text" class="data" placeholder="请输入权重系数" style="position: absolute;bottom: 60px" name="salary_value">
+                                            </div>
+                                        </div>
+                                        <p>工资</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-4 service_grid text-center">
+                                        <div class="serviceinfo_agile ih-item circle colored effect17">
+                                            <div class="img"><img src="{% static 'images/s1.jpg' %}" class="img-fluid" alt="img"></div>
+                                            <div class="info  d-flex align-items-center justify-content-center">
+                                                <input type="checkbox" class="c-box" style="transform: scale(3,3);position: absolute;top: 60px">&nbsp;
+                                                <input type="text" class="data" placeholder="请输入权重系数" style="position: absolute;bottom: 60px">
+                                            </div>
+                                        </div>
+                                        <p>population</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-4 service_grid text-center">
+                                        <div class="serviceinfo_agile ih-item circle colored effect17">
+                                            <div class="img"><img src="{% static 'images/s2.jpg' %}" class="img-fluid" alt="img"></div>
+                                            <div class="info  d-flex align-items-center justify-content-center">
+                                                <input type="checkbox" class="c-box" id="c-box" style="transform: scale(3,3);position: absolute;top: 60px">
+                                                <label for="c-box"></label>&nbsp;
+                                                <input type="text" class="data" placeholder="请输入权重系数" style="position: absolute;bottom: 60px">
+                                            </div>
+                                        </div>
+                                        <p>wood carving</p>
+                                    </div>
+                                </div>
+                                <input type="submit" value="提交" class="sub" id="data-sub">
+                            </form>
+                        </div>
+                    </div>
+                    <!-- //services -->
+                </div>
+                <!-- //glance -->
+                <!-- explore -->
+                <div id="explore">
+                    <div class="explore-sec py-5">
+                        <div class="container pt-lg-5">
+                            <div class="w3pvt-head">
+                                <span class="w3-line"></span>
+                                <h3 class="agile-title d-inline text-white">find & Analyze</h3>
+                                <div class="mt-lg-5 mt-3">
+                                    <p class="text-white slide-txt">这里有上百万条数据来为您服务，旨在可以给您带来优质的选择以及成为你人生路上的指路灯!!!</p>
+                                </div>
+                            </div>
+                            <div class="row py-sm-5 mt-sm-0 mt-4">
+                                <div class="col-lg-3 col-sm-6 flex-wrap  border-right p-0 slide-sec">
+                                    <div class="d-flex  align-items-center justify-content-center wthree-list-grid">
+                                        <div class="slide-icon">
+                                            <span class="fa fa-thumbs-up theme-color" aria-hidden="true"></span>
+                                        </div>
+                                        <div class="num">
+                                            <span id="span1" class="span2">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-wrap col-lg-3 col-sm-6 border-right p-0 slide-sec">
+                                    <div class="d-flex  align-items-center justify-content-center wthree-list-grid">
+                                        <div class="slide-icon">
+                                            <span class="fa fa-money slide-icon theme-color" aria-hidden="true"></span>
+                                        </div>
+                                        <div class="num">
+                                            <span id="span2" class="span2">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wthree-list-grid flex-wrap col-lg-3 col-sm-6 border-right p-0 slide-sec">
+                                    <div class="d-flex  align-items-center justify-content-center wthree-list-grid">
+                                        <div class="slide-icon">
+                                            <span class="fa fa-picture-o slide-icon theme-color" aria-hidden="true"></span>
+
+                                        </div>
+                                        <div class="num">
+                                            <span id="span3" class="span2">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wthree-list-grid  flex-wrap col-lg-3 col-sm-6 p-0 slide-sec">
+                                    <div class="d-flex  align-items-center justify-content-center wthree-list-grid">
+                                        <div class="slide-icon">
+                                            <span class="fa fa-briefcase slide-icon theme-color" aria-hidden="true"></span>
+                                        </div>
+                                        <div class="num">
+                                            <span class="span2" id="span4">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //explore -->
+                <!-- //banner -->
+                <!-- about -->
+                <div id="about" class="py-lg-5 py-4">
+                    <div class="container">
+                        <!-- banner bottom -->
+                        <div class="banner-bottom my-lg-5">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-6 flex-wrap  border-right p-0">
+                                    <div class="d-flex  align-items-center justify-content-center wthree-list-grid">
+                                        <div class="wthree-list-icon">
+                                            <span class="fa fa-thumbs-up" aria-hidden="true"></span>
+                                        </div>
+                                        <div class="wthree-list-desc">
+                                            <p>数据量足够大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-wrap col-lg-3 col-sm-6 border-right p-0">
+                                    <div class="d-flex  align-items-center justify-content-center wthree-list-grid">
+                                        <div class="wthree-list-icon">
+                                            <span class="fa fa-money" aria-hidden="true"></span>
+                                        </div>
+                                        <div class="wthree-list-desc">
+                                            <p>数据来源真实</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wthree-list-grid flex-wrap col-lg-3 col-sm-6 border-right p-0">
+                                    <div class="d-flex  align-items-center justify-content-center wthree-list-grid">
+                                        <div class="wthree-list-icon">
+                                            <span class="fa fa-picture-o" aria-hidden="true"></span>
+                                        </div>
+                                        <div class="wthree-list-desc">
+                                            <p>查询速度快</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wthree-list-grid  flex-wrap col-lg-3 col-sm-6 p-0">
+                                    <div class="d-flex  align-items-center justify-content-center wthree-list-grid">
+                                        <div class="wthree-list-icon">
+                                            <span class="fa fa-briefcase" aria-hidden="true"></span>
+                                        </div>
+                                        <div class="wthree-list-desc">
+                                            <p>界面友好</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //banner bottom -->
+                        <!-- about -->
+                        <div class="about-w3ls py-lg-5">
+                            <div class="row py-3">
+                                <div class="col-lg-6">
+                                    <div class="abt-wthree">
+                                        <img src="images/a1.jpg" class="img-fluid" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 w3pvt-head">
+                                    <span class="w3-line"></span>
+                                    <h3 class="agile-title d-inline">find & analyze</h3>
+                                    <div class="mt-lg-5 mt-3">
+                                        <p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui
+                                            miNulla accumsan ac elit in congue. Class aptent taciti sociosqu, vulputate
+                                            ac
+                                            metus at,
+                                            semper varius orci.
+                                            Nulla accumsan ac elit in congue. Class aptent taciti sociosqu ad
+                                            litora
+                                            torquent
+                                            per conubia nostra,
+                                            per inceptos himenaeos.</p>
+                                        <p class="my-4">Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi,
+                                            vulputate
+                                            ac
+                                            metus at,
+                                            semper varius orci.
+                                            Nulla accumsan ac elit in congue. Class aptent taciti sociosqu ad
+                                            litora
+                                            torquent
+                                            per conubia nostra,
+                                            per inceptos himenaeos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //about -->
+                </div>
+                <!-- //about -->
+                <!-- services -->
+                <div id="services">
+                    <div class="container py-lg-5 py-4">
+                        <div class="row py-sm-5 pt-3 pb-4">
+                            <div class="col-lg-5 w3pvt-head">
+                                <span class="w3-line"></span>
+                                <h3 class="agile-title d-inline">services</h3>
+                            </div>
+                            <div class="col-lg-7 mt-lg-0 mt-3">
+                                <p class="text-white">Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi,
+                                    vulputate
+                                    ac
+                                    metus
+                                    at,
+                                    semper varius orci.
+                                    Nulla accumsan ac elit in congue. Class aptent taciti sociosqu ad
+                                    litora
+                                    torquent
+                                    per conubia nostra,
+                                    per inceptos himenaeos.</p>
+                            </div>
+                        </div>
+                        <div class="row mb-lg-5 pt-md-5">
+                            <div class="col-lg-3 col-md-6 my-md-0 my-4">
+                                <div class="abt-block active-sgrid">
+                                    <div class="serv_abs serv_bottom">
+                                        <span><img src="images/buy.jpg" alt=""></span>
+                                    </div>
+                                    <h4>买房</h4>
+                                    <p>买房</p>
+                                    <h5 class="text-right">- some text</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 my-md-0 mt-4">
+                                <div class="abt-block">
+                                    <div class="serv_abs serv_bottom">
+                                        <span><img src="images/weather.jpg" alt=""></span>
+                                    </div>
+                                    <h4>天气</h4>
+                                    <p>天气</p>
+                                    <h5 class="text-right">- some text</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 my-lg-0 mt-4 mx-auto service-grid-3">
+                                <div class="abt-block">
+                                    <div class="serv_abs serv_bottom">
+                                        <span><img src="images/rent1.jpg" alt=""></span>
+                                    </div>
+                                    <h4>租房</h4>
+                                    <p>租房</p>
+                                    <h5 class="text-right">- some text</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 my-lg-0 mt-4 mx-auto service-grid-3">
+                                <div class="abt-block">
+                                    <div class="serv_abs serv_bottom">
+                                        <span><img src="images/air.jpg" alt=""></span>
+                                    </div>
+                                    <h4>空气指数AQI</h4>
+                                    <p>空气指数AQI</p>
+                                    <h5 class="text-right">- some text</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 my-lg-0 mt-4 mx-auto service-grid-3">
+                                <div class="abt-block">
+                                    <div class="serv_abs serv_bottom">
+                                        <span><img src="images/work.jpg" alt=""></span>
+                                    </div>
+                                    <h4>工作数量</h4>
+                                    <p>工作数量</p>
+                                    <h5 class="text-right">- some text</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 my-lg-0 mt-4 mx-auto service-grid-3">
+                                <div class="abt-block">
+                                    <div class="serv_abs serv_bottom">
+                                        <span><img src="images/salary.jpg" alt=""></span>
+                                    </div>
+                                    <h4>工资</h4>
+                                    <p>工资</p>
+                                    <h5 class="text-right">- some text</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 my-lg-0 mt-4 mx-auto service-grid-3">
+                                <div class="abt-block">
+                                    <div class="serv_abs serv_bottom">
+                                        <span>logo 7</span>
+                                    </div>
+                                    <h4>Environment</h4>
+                                    <p>环境</p>
+                                    <h5 class="text-right">- some text</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 my-lg-0 mt-4 mx-auto service-grid-3">
+                                <div class="abt-block">
+                                    <div class="serv_abs serv_bottom">
+                                        <span>logo 8</span>
+                                    </div>
+                                    <h4>Environment</h4>
+                                    <p>环境</p>
+                                    <h5 class="text-right">- some text</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //services -->
+
+
+                <!-- footer -->
+                <div class="footer-bottom py-lg-5 py-3">
+                    <div class="footerv2-w3ls  text-center">
+                        <h6 class="w3f_title">Socialize with Us</h6>
+                    </div>
+                    <div class="footer-copy text-center">
+                        <p class="text-dark">only for you</p>
+                    </div>
+                    <div style="width:300px;margin:0 auto; padding:20px 0;">
+                        <img src="images/备案图标.png" alt="">
+                        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=37028102000865" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">鲁公网安备 37028102000865号</p></a>
+                    </div>
+                </div>
+                <!-- //footer -->
+            <!-- //main -->
+         </div>
+     </div>
+    <!-- modal -->
+    <!--<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">相信生活，它给人的教诲比任何一本书籍都好!!!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="images/life.jpeg" class="img-fluid" alt="" />
+                    <p class="text-left">
+                        There is only one true heroism in the world, that is to recognize the truth of the life after still love life.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+    <!-- Bootstrap core JavaScript
+================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.min.js"></script>
+        <script>
+            var num1 = 0;
+            var num2 = 0;
+            var num3 = 0;
+            var num4 = 0;
+            var t1 = setInterval(function(){
+                num1++;
+                var span1 = document.getElementById("span1");
+                span1.innerText = num1;
+                if(num1==1300000){
+                    clearInterval(t1);
+                }
+            },1);
+
+            var t2 = setInterval(function(){
+                num2++;
+                var span2 = document.getElementById("span2");
+                span2.innerText = num2;
+                if(num2==1400200){
+                    clearInterval(t2);
+                }
+            },1);
+            var t3 = setInterval(function(){
+                num3++;
+                var span3 = document.getElementById("span3");
+                span3.innerText = num3;
+                if(num3==1034500){
+                    clearInterval(t3);
+                }
+            },1);
+            var t4 = setInterval(function(){
+                num4++;
+                var span4 = document.getElementById("span4");
+                span4.innerText = num4;
+                if(num4==1122000){
+                    clearInterval(t4);
+                }
+            },1);
+        </script>
+
+</body>
+
+</html>

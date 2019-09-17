@@ -1,0 +1,98 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+   <meta charset="utf-8">
+</head>
+
+<body style="height: 100%; margin: 0">
+
+<div id="container" style="height: 100%"></div>
+
+
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+
+
+
+
+<script type="text/javascript">
+    var series0 = {{ series|safe }};
+    var city_name = {{ city_name|safe }};
+    var dom = document.getElementById("container");
+    var myChart = echarts.init(dom);
+    var app = {};
+    option = null;
+
+
+    option = {
+        title: {
+            text: '堆叠区域图'
+        },
+        toolbox: {
+        show: true,
+        feature: {
+            dataZoom: {
+                yAxisIndex: 'none'
+            },
+            dataView: {readOnly: false},
+            magicType: {type: ['line', 'bar']},
+            restore: {},
+            saveAsImage: {}
+        },
+
+    },
+        tooltip : {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross',
+                label: {
+                    backgroundColor: '#6a7985'
+                }
+            }
+        },
+        legend: {
+            data: ['买房价格得分','租房价格得分','空气质量aqi得分','温度舒适度得分']
+        },
+        dataZoom: [
+        {
+            show: true,
+            realtime: true,
+            start: 0,
+            end: 10,
+            {#xAxisIndex: [0, 1]#}
+        },
+        // {
+        //     type: 'inside',
+        //     realtime: true,
+        //     start: 30,
+        //     end: 70,
+        //     xAxisIndex: [0, 1]
+        // }
+    ],
+
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        yAxis:  {
+            type: 'value',
+            sort : 'none',   // can be 'none', 'ascending', 'descending'
+            sortSub : 'none',
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap : false,
+            data: city_name
+        },
+        series: series0
+};;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+    series0 = []
+    city_name = []
+}
+       </script>
+   </body>
+</html>
